@@ -80,7 +80,7 @@ const CGFloat navControllerHeight = 44;
     }
     
     // Setup self
-    self.TranslatesAutoresizingMaskIntoConstraints=NO;
+    self.translatesAutoresizingMaskIntoConstraints=NO;
     [self setFrame:CGRectMake(0,0,viewController.view.frame.size.width/3,viewController.view.frame.size.width/3)];
     self.layer.cornerRadius = self.frame.size.width/2;
     self.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -150,7 +150,7 @@ const CGFloat navControllerHeight = 44;
 
 -(void) positionAlertForPosition:(int)position {
     
-    if UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation) {
+    if (UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation)) {
         
         int centerX = self.viewController.view.frame.size.width/2;
         int centerY = self.viewController.view.frame.size.height/2;
